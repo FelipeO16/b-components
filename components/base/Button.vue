@@ -51,7 +51,7 @@ const outlines = {
     "hover:text-white",
   ],
   background: [
-    " border border-background-500 dark:border border-background-300",
+    " border border-background-500 dark:border border-background-500",
     "text-background-500 dark:text-background-300",
     " hover:bg-background-500 dark:hover:bg-background-300",
     "hover:text-white dark:hover:text-white",

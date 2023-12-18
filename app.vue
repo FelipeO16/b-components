@@ -1,5 +1,10 @@
 <template>
-  <div class="dark">
+  <div
+    :class="{
+      dark: dark,
+      light: !dark,
+    }"
+  >
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
@@ -7,13 +12,5 @@
 </template>
 
 <script setup>
-useHead({
-  script: [
-    `if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        document.documentElement.setAttribute("data-theme", "dark");
-    } else {
-        document.documentElement.removeAttribute("data-theme");
-    }`,
-  ],
-});
+let dark = useLocalStorage("dark", true);
 </script>

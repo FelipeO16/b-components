@@ -45,7 +45,7 @@ const outlines = {
     "hover:text-white",
   ],
   neutral: [
-    " border border-neutral-500",
+    " border border-neutral-500 ",
     "text-neutral-500",
     " hover:bg-neutral-500",
     "hover:text-white",
@@ -112,60 +112,9 @@ const classes = computed(() => {
 <style scoped>
 .button {
   font-family: "Inter";
-  @apply px-4 py-2 transition-all duration-200 ease-in-out relative z-20;
+  @apply px-4 py-2 transition-all duration-200 ease-in-out relative z-20 shadow-md;
 }
 .button:hover {
   @apply bg-opacity-80 shadow-lg;
 }
-
-/* .button::before,
-.button::after {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  right: -5px;
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  z-index: -1;
-  opacity: 0;
-  border-radius: 3px;
-  transition: opacity 0.3s ease-in-out;
-  @apply border-r-2 border-b-white/25;
-}
-
-.button:hover::before {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  right: -5px;
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  border: 2px solid white;
-  border-color: transparent white white transparent;
-  z-index: -1;
-  opacity: 1;
-  border-radius: 3px;
-  transition: opacity 0.3s ease-in-out;
-  @apply border-r-2 border-b-white/25;
-}
-
-.button:hover::after {
-  content: "";
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  border: 2px solid;
-  border-radius: 3px;
-  border-color: white transparent transparent white;
-
-  z-index: -1;
-  opacity: 1;
-  transition: opacity 0.3s ease-in-out;
-  @apply border-l-white/25 border-t-white/25;
-} */
 </style>

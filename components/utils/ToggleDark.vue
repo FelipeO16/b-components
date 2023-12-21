@@ -1,11 +1,12 @@
 <template>
-  <div class="toggle-dark/light max-w-[3.5rem]">
-    <Transition>
-      <BaseIconButton @click="dark = !dark" shape="rounded">
-        <IconDark light="primary" v-if="!dark" />
-        <IconLight dark="warning" v-if="dark" />
-      </BaseIconButton>
-    </Transition>
+  <div class="toggle-dark/light max-w-[3.5rem] cursor-pointer">
+    <IconDark class="h-14" dark="neutral" @click="dark = !dark" v-if="dark" />
+    <IconLight
+      class="h-14"
+      light="primary"
+      @click="dark = !dark"
+      v-if="!dark"
+    />
   </div>
 </template>
 

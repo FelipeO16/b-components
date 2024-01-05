@@ -1,10 +1,5 @@
 <template>
-  <div
-    :class="{
-      dark: dark,
-      light: !dark,
-    }"
-  >
+  <div :class="{ dark: dark }">
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>

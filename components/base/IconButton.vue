@@ -20,6 +20,6 @@ const shape = computed(() => shapes[props.shape ?? "rounded"]);
 
 <style scoped>
 .btn {
-  @apply p-2 bg-background-600 border border-[#ffffff70] dark:border-gray-500 dark:bg-gray-500 bg-opacity-10 dark:bg-opacity-20 text-white w-full h-full shadow-md shadow-[#1c1c1c] dark:shadow-black max-w-[3.5rem];
+  @apply p-2 bg-background-600 border border-[#ffffff70] dark:border-gray-500 dark:bg-gray-500 bg-opacity-10 dark:bg-opacity-20 text-white shadow-md shadow-[#1c1c1c] dark:shadow-black;
 }
 </style>

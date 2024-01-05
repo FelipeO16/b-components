@@ -11,7 +11,7 @@
 </template>
 
 <script setup lang="ts">
-let dark = useLocalStorage("dark", false);
+let dark = useLocalStorage("dark", true);
 </script>
 
 <style scoped>

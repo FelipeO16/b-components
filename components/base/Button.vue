@@ -6,6 +6,8 @@ const props = withDefaults(
     shape?: keyof typeof shapes;
     fullWidth?: boolean;
     outlined?: boolean;
+    icon?: "string";
+    iconColor?: "string";
   }>(),
   {
     type: "primary",
@@ -105,6 +107,12 @@ const classes = computed(() => {
 
 <template>
   <button :class="classes" class="button">
+    <Icon
+      :name="props.icon"
+      :color="props.iconColor ?? 'black'"
+      class="mr-2"
+      v-if="props.icon"
+    />
     <slot />
   </button>
 </template>

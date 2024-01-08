@@ -30,11 +30,23 @@
         />
       </BaseIconButton>
     </div>
+
+    <BaseDialogue
+      :show="true"
+      title="Aviso Importante"
+      message="Este é um exemplo de diálogo?"
+      type="primary"
+      shape="none"
+    />
   </div>
 </template>
 
 <style scoped>
 .a {
-  @apply h-screen w-screen   bg-gradient-to-br from-[#ffea299c] dark:from-[#171852] to-[#ff00005d] dark:to-[#ea00ff4d] dark:bg-background-800 bg-[#e1e0e400];
+  @apply h-screen w-screen   bg-[#1c1c1c];
 }
 </style>
+
+<script lang="ts">
+const show = ref(true);
+</script>

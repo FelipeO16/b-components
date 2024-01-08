@@ -23,13 +23,13 @@ const sizes = {
 };
 
 const types = {
-  primary: ["bg-primary-500", "text-white"],
+  primary: ["bg-primary-500", "text-muted-500"],
   muted: ["bg-muted-500", "text-white"],
   neutral: ["bg-neutral-500", "text-black"],
   background: ["bg-background-500", "text-white"],
   success: ["bg-success-500", "text-white"],
   error: ["bg-error-500", "text-white"],
-  warning: ["bg-warning-500", "text-white"],
+  warning: ["bg-warning-500", "text-muted-500"],
   info: ["bg-info-500", "text-white"],
 };
 
@@ -88,7 +88,7 @@ const shapes = {
   full: "rounded-full after:rounded-full before:rounded-full",
   xl: "rounded-xl after:rounded-xl before:rounded-xl",
   lg: "rounded-lg after:rounded-lg before:rounded-lg",
-  mid: "rounded-md after:rounded-md before:rounded-md",
+  md: "rounded-md after:rounded-md before:rounded-md",
   sm: "rounded-sm after:rounded-sm before:rounded-sm",
   xs: "rounded after:rounded before:rounded",
   none: "rounded-none after:rounded-none before:rounded-none",
@@ -100,7 +100,7 @@ const classes = computed(() => {
     ...type,
     props.size && sizes[props.size],
     props.fullWidth && "w-full",
-    shapes[props.shape] || shapes.mid,
+    shapes[props.shape] || shapes.md,
   ];
 });
 </script>

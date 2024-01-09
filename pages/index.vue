@@ -31,12 +31,12 @@
       </BaseIconButton>
     </div>
 
-    <BaseDialogue
+    <BaseAlert
       :show="true"
       title="Aviso Importante"
-      message="Este é um exemplo de diálogo?"
-      type="primary"
-      shape="none"
+      message="Este é um exemplo de Alerta!"
+      type="success"
+      shape="rounded"
     />
   </div>
 </template>

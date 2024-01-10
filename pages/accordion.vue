@@ -1,7 +1,6 @@
 <template>
-  <div class="w-full h-screen">
+  <div class="w-full h-screen flex flex-col justify-center">
     <div class="md:max-w-lg">
-      lalala
       <BaseAccordion :items="accordion" shape="rounded" />
     </div>
     <UtilsToggleDark />

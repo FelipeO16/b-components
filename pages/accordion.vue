@@ -3,6 +3,7 @@
     <div class="md:max-w-lg">
       <BaseAccordion :items="accordion" shape="rounded" />
     </div>
+
     <UtilsToggleDark />
   </div>
 </template>

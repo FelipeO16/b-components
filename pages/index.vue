@@ -2,34 +2,36 @@
   <div class="a flex justify-center p-4 flex-col gap-16 flex-wrap">
     <UtilsToggleDark />
     <div class="flex gap-2">
-      <BaseIconButton class="h-fit">
-        <Icon
-          name="icon-park-outline:facebook"
-          color="#3b5998"
-          class="text-3xl"
-        />
-      </BaseIconButton>
-      <BaseIconButton class="h-fit">
-        <Icon
-          name="icon-park-outline:instagram"
-          color="#e1306c"
-          class="text-3xl"
-        />
-      </BaseIconButton>
-      <BaseIconButton class="h-fit">
-        <Icon
-          name="icon-park-outline:youtube"
-          color="#ff0000"
-          class="text-3xl"
-        />
-      </BaseIconButton>
-      <BaseIconButton class="h-fit">
-        <Icon
-          name="icon-park-outline:twitter"
-          color="#00acee"
-          class="text-3xl"
-        />
-      </BaseIconButton>
+      <BaseButtonGroup>
+        <BaseIconButton class="h-fit">
+          <Icon
+            name="icon-park-outline:facebook"
+            color="#3b5998"
+            class="text-3xl"
+          />
+        </BaseIconButton>
+        <BaseIconButton class="h-fit">
+          <Icon
+            name="icon-park-outline:instagram"
+            color="#e1306c"
+            class="text-3xl"
+          />
+        </BaseIconButton>
+        <BaseIconButton class="h-fit">
+          <Icon
+            name="icon-park-outline:youtube"
+            color="#ff0000"
+            class="text-3xl"
+          />
+        </BaseIconButton>
+        <BaseIconButton class="h-fit">
+          <Icon
+            name="icon-park-outline:twitter"
+            color="#00acee"
+            class="text-3xl"
+          />
+        </BaseIconButton>
+      </BaseButtonGroup>
     </div>
 
     <div class="md:max-w-lg">
@@ -40,16 +42,18 @@
       :show="true"
       title="Aviso Importante"
       message="Este é um exemplo de Alerta!"
-      type="success"
+      type="warning"
       shape="rounded"
     />
     <div class="flex gap-8">
-      <BaseButton
-        v-for="(btn, index) in btns"
-        :type="btn"
-        :key="index"
-        shape="rounded"
-        >{{ btn.toUpperCase() }}</BaseButton
+      <BaseButtonGroup>
+        <BaseButton
+          v-for="(btn, index) in btns"
+          :type="btn"
+          :key="index"
+          shape="rounded"
+          >{{ btn.toUpperCase() }}</BaseButton
+        ></BaseButtonGroup
       >
     </div>
     <div class="w-1/6">
@@ -77,6 +81,16 @@
       class="h-24 hover:shadow-2xl hover:scale-[1.02] transition-all duration-300"
     >
     </BaseGlassCard>
+
+    <BasePagination
+      color="success"
+      :pagination="{
+        current_page: 1,
+        last_page: 20,
+        to: 4,
+        from: 1,
+      }"
+    />
   </div>
 </template>
 
